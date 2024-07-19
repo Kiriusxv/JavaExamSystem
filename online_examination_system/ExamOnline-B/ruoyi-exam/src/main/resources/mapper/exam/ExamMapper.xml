@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.examol.exam.mapper.ExamMapper">
+
+<!--    <resultMap type="Question" id="QuestionResult">-->
+<!--        <result property="id" column="id"/>-->
+<!--        <result property="questionType" column="question_type"/>-->
+<!--        <result property="subjectId" column="subject_id"/>-->
+<!--        <result property="score" column="score"/>-->
+<!--        <result property="correct" column="correct"/>-->
+<!--        <result property="content" column="content"/>-->
+<!--        <result property="options" column="options"/>-->
+<!--        <result property="image" column="image"/>-->
+<!--    </resultMap>-->
+
+
+    <!-- 插入考试结果 -->
+    <insert id="insert" parameterType="ExamSubmission" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO t_exam_result (user_id, score, exam_date)
+        VALUES (#{userId}, #{score}, #{examDate})
+    </insert>
+
+    <insert id="insertAnswer" parameterType="map">
+        INSERT INTO t_exam_answer (exam_id, question_id, user_answer, is_correct)
+        VALUES (#{examId}, #{answer.questionId}, #{answer.userAnswer}, #{answer.isCorrect})
+    </insert>
+
+    <select id="getExamDetails" resultType="com.examol.exam.domain.ExamDetail">
+        SELECT
+            q.id AS "question.id",
+            q.question_type AS "question.questionType",
+            q.subject_id AS "question.subjectId",
+            q.score AS "question.score",
+            q.correct AS "question.correct",
+            q.content AS "question.content",
+            q.options AS "question.options",
+            q.explanation AS "question.explanation",
+            q.image AS "question.image",
+            q.video AS "question.video",
+            a.user_answer AS "userAnswer",
+            a.is_correct AS "isCorrect"
+        FROM
+            t_exam_answer a
+                JOIN
+            t_question q ON a.question_id = q.id
+        WHERE
+            a.exam_id = #{examId}
+        order by q.question_type asc
+    </select>
+    <select id="getExamHistory" resultType="com.examol.exam.domain.ExamHistory">
+        SELECT
+            r.id AS "examId",
+            r.score AS "score",
+            r.exam_date AS "date"
+        FROM
+            t_exam_result r
+        WHERE
+            r.user_id = #{userId}
+        order by r.exam_date desc
+    </select>
+
+
+</mapper>

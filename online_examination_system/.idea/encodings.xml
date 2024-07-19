@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/aliyun-oss-spring-boot-autoconfigure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aliyun-oss-spring-boot-starter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-admin/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-admin/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-common/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-exam/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-exam/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-framework/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-framework/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-generator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-pojo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-pojo/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-quartz/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-quartz/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/ruoyi-system/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/online_examination_system/src/main/resources" charset="UTF-8" />
+  </component>
+</project>
